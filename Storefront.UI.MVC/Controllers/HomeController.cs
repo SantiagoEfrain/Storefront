@@ -28,5 +28,25 @@ namespace Storefront.UI.MVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        //about contact index products single-product
+
+        public IActionResult about()
+        {
+            return View();
+        }
+        public IActionResult contact()
+        {
+            return View();
+        }
+        public IActionResult products()
+        {
+            return View();
+        }
+        public IActionResult singleProduct()
+        {
+            return View();
+        }
+
+
     }
 }

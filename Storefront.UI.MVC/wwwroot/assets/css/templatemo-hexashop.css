@@ -664,7 +664,7 @@ banner
 .main-banner .left-content .inner-content {
   position: absolute;
   left: 100px;
-  top: 50%;
+  top: 28%;
   transform: translateY(-50%);
 }
 
