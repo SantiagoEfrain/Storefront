@@ -12,6 +12,7 @@ namespace Storefront.DATA.EF.Models
 
         public int CategoryId { get; set; }
         public string CategoryName { get; set; } = null!;
+        public string? CategoryDesc { get; set; }
 
         public virtual ICollection<MobileSuit> MobileSuits { get; set; }
     }

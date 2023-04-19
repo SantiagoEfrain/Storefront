@@ -12,6 +12,7 @@ namespace Storefront.DATA.EF.Models
 
         public int UniverseId { get; set; }
         public string UniverseName { get; set; } = null!;
+        public string? UniverseDesc { get; set; }
 
         public virtual ICollection<MobileSuit> MobileSuits { get; set; }
     }
