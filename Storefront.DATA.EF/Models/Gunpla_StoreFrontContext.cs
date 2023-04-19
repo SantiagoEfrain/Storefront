@@ -134,6 +134,10 @@ namespace Storefront.DATA.EF.Models
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
+                entity.Property(e => e.CategoryDesc)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.CategoryName)
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -151,6 +155,11 @@ namespace Storefront.DATA.EF.Models
                 entity.Property(e => e.Description)
                     .HasMaxLength(500)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Msimage)
+                    .HasMaxLength(75)
+                    .IsUnicode(false)
+                    .HasColumnName("MSImage");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
@@ -214,6 +223,10 @@ namespace Storefront.DATA.EF.Models
                 entity.ToTable("Universe");
 
                 entity.Property(e => e.UniverseId).HasColumnName("UniverseID");
+
+                entity.Property(e => e.UniverseDesc)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.UniverseName)
                     .HasMaxLength(50)

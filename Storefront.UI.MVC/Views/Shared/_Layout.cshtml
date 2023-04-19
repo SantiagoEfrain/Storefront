@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] MSW</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="~/https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -43,7 +46,7 @@
     </div>
     <!-- ***** Preloader End ***** -->
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky" style="background-color:dimgrey">
+    <header class="header-area header-sticky " style="background-color:dimgrey">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -56,28 +59,30 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
-                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
-                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="scroll-to-section"><a href="#UC">UC</a></li>
+                            <li class="scroll-to-section"><a href="#AO">AO</a></li>
+                            <li class="scroll-to-section"><a href="#PO">PO</a></li>
+                            <li class="scroll-to-section"><a href="#AC">AC</a></li>
                             <li class="submenu">
-                                <a href="javascript:;">Pages</a>
+                                <a href="javascript:;">More</a>
                                 <ul>
                                     <li><a asp-action="About" asp-controller="Home">About Us</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="products.html">All MS</a></li>
+                                    <li><a href="single-product.html">Categories</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
-                                <a href="javascript:;">Features</a>
+                                <a href="javascript:;">Admin</a>
                                 <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                    <li><a asp-action="Index" asp-controller="Categories">Categories</a></li>
+                                    <li><a asp-action="Index" asp-controller="MobileSuits">Mobile Suits</a></li>
+                                    <li><a asp-action="Index" asp-controller="ModelScales">Model Scales</a></li>
+                                    <li><a asp-action="Index" asp-controller="StockStatus">Stock Status</a></li>
+                                    <li><a asp-action="Index" asp-controller="Universe">Universe</a></li>
                                 </ul>
                             </li>
-                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+@*                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>*@
+                            <partial name="_LoginPartial" />
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -89,9 +94,10 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+    <div style="background-color:dimgrey">
+            @RenderBody()
 
-    @RenderBody()
-
+    </div>
 
 
 
@@ -177,6 +183,10 @@
     <script src="~/assets/js/slick.js"></script>
     <script src="~/assets/js/lightbox.js"></script>
     <script src="~/assets/js/isotope.js"></script>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 
     <!-- Global Init -->
     <script src="~/assets/js/custom.js"></script>
