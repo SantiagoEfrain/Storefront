@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Storefront.UI.MVC.Data;
+using Storefront.DATA.EF.Models;
 using System.Data;
 
 namespace Storefront.UI.MVC
@@ -18,7 +19,7 @@ namespace Storefront.UI.MVC
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            builder.Services.AddDbContext <ApplicationDbContext> (options =>options.UseSqlServer(connectionString));
+            builder.Services.AddDbContext <Gunpla_StoreFrontContext> (options =>options.UseSqlServer(connectionString));
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 

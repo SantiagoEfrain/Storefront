@@ -1,0 +1,30 @@
+﻿@model Storefront.DATA.EF.Models.Universe
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Universe</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniverseName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniverseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniverseDesc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniverseDesc)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.UniverseId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

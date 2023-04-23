@@ -22,7 +22,7 @@ namespace Storefront.DATA.EF//.Metadata
         [Display(Name = "Description")]
         [StringLength(500, ErrorMessage = "500 Char Max")]
         [DataType(DataType.MultilineText)]
-        public string? CategoryDescription { get; set; }
+        public string? CategoryDesc { get; set; }
 
 
     }
