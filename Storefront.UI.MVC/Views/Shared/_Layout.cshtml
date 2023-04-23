@@ -1,4 +1,4 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,14 +67,16 @@
                                 <a href="javascript:;">More</a>
                                 <ul>
                                     <li><a asp-action="About" asp-controller="Home">About Us</a></li>
-                                    <li><a href="products.html">All MS</a></li>
-                                    <li><a href="single-product.html">Categories</a></li>
+                                    <li><a asp-action="Index" asp-controller="MobileSuits">All MS</a></li>
+                                    <li><a asp-action="Index" asp-controller="Categories">Categories</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
                                 <a href="javascript:;">Admin</a>
                                 <ul>
-                                    <li><a asp-action="Index" asp-controller="Categories">Categories</a></li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Categories")">Categories</a>
+                                    </li>
                                     <li><a asp-action="Index" asp-controller="MobileSuits">Mobile Suits</a></li>
                                     <li><a asp-action="Index" asp-controller="ModelScales">Model Scales</a></li>
                                     <li><a asp-action="Index" asp-controller="StockStatus">Stock Status</a></li>
@@ -185,7 +187,7 @@
     <script src="~/assets/js/isotope.js"></script>
 
 
-    <script src="~/js/site.js" asp-append-version="true"></script>
+   @* <script src="~/js/site.js" asp-append-version="true"></script>*@
     @await RenderSectionAsync("Scripts", required: false)
 
     <!-- Global Init -->
