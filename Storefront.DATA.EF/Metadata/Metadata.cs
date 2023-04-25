@@ -62,6 +62,9 @@ namespace Storefront.DATA.EF//.Metadata
 
         [Required(ErrorMessage = "Required Field")]
         public int StockAmount { get; set; }
+
+        [StringLength(75)]
+        [Display(Name = "Image")]
         public string? MSImage { get; set; }
 
     }

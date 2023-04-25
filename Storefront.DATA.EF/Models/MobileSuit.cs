@@ -16,9 +16,9 @@ namespace Storefront.DATA.EF.Models
         public int StockAmount { get; set; }
         public string? Msimage { get; set; }
 
-        public virtual Category Category { get; set; } = null!;
-        public virtual ModelScale Scale { get; set; } = null!;
-        public virtual StockStatus StockStatus { get; set; } = null!;
-        public virtual Universe Universe { get; set; } = null!;
+        public virtual Category? Category { get; set; }
+        public virtual ModelScale? Scale { get; set; }
+        public virtual StockStatus? StockStatus { get; set; }
+        public virtual Universe? Universe { get; set; }
     }
 }

@@ -52,21 +52,28 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a a asp-action="Index" asp-controller="Home" class="logo">
                             <img src="~/assets/images/MSW Logo bg-non 85.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
+
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#UC">UC</a></li>
+
+
+                            <li><a asp-action="Index" asp-controller="Home" class="scroll-to-section">Home</a></li>
+
+
+@*                            <li class="scroll-to-section"><a href="#UC">UC</a></li>
                             <li class="scroll-to-section"><a href="#AO">AO</a></li>
                             <li class="scroll-to-section"><a href="#PO">PO</a></li>
                             <li class="scroll-to-section"><a href="#AC">AC</a></li>
+*@
+
+
                             <li class="submenu">
                                 <a href="javascript:;">More</a>
                                 <ul>
-                                    <li><a asp-action="About" asp-controller="Home">About Us</a></li>
                                     <li><a asp-action="Index" asp-controller="MobileSuits">All MS</a></li>
                                     <li><a asp-action="Index" asp-controller="Categories">Categories</a></li>
                                 </ul>
@@ -80,10 +87,10 @@
                                     <li><a asp-action="Index" asp-controller="MobileSuits">Mobile Suits</a></li>
                                     <li><a asp-action="Index" asp-controller="ModelScales">Model Scales</a></li>
                                     <li><a asp-action="Index" asp-controller="StockStatus">Stock Status</a></li>
-                                    <li><a asp-action="Index" asp-controller="Universe">Universe</a></li>
+                                    <li><a asp-action="Index" asp-controller="Universes">Universe</a></li>
                                 </ul>
                             </li>
-@*                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>*@
+                            @*                            <li class="scroll-to-section"><a href="#explore">Explore</a></li>*@
                             <partial name="_LoginPartial" />
                         </ul>
                         <a class='menu-trigger'>
@@ -97,7 +104,7 @@
     </header>
     <!-- ***** Header Area End ***** -->
     <div style="background-color:dimgrey">
-            @RenderBody()
+        @RenderBody()
 
     </div>
 
@@ -112,57 +119,55 @@
                         <div class="logo">
                             <img src="~/assets/images/MSW Logo bg-non 85.png" alt="MSW Logo">
                         </div>
-                        <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
-                            <li><a href="#">010-020-0340</a></li>
-                        </ul>
+
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <h4>Shopping &amp; Categories</h4>
                     <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
+                        <li><a href="#">12456 Perrin Ave, San Francisco</a></li>
+                        <li><a href="#">CA 94112, United States</a></li>
+                        <li><a href="#">MSW@YashimaEnt.com</a></li>
+                        <li><a href="#">415-421-6986</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#UC">UC</a></li>
+                        <li><a href="#AO">AD</a></li>
+                        <li><a href="#PO">PO</a></li>
+                        <li><a href="#AC">AC</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Help</a></li>
+                        <li><a asp-action="Index" asp-controller="Home">Homepage</a></li>
+                        <li><a asp-action="Index" asp-controller="MobileSuits">All MS</a></li>
+                        <li><a asp-action="Index" asp-controller="Categories">Categories</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3">
-                    <h4>Help &amp; Information</h4>
+
+            </div>
+            <div class="col-lg-12">
+                <div class="under-footer">
+                    <p>
+                        Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
+
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
+
+                        <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a>
+                    </p>
                     <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Tracking ID</a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-lg-12">
-                    <div class="under-footer">
-                        <p>
-                            Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
-
-                            <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a>
-                        </p>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
+        </div>
         </div>
     </footer>
 
@@ -187,7 +192,7 @@
     <script src="~/assets/js/isotope.js"></script>
 
 
-   @* <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @* <script src="~/js/site.js" asp-append-version="true"></script>*@
     @await RenderSectionAsync("Scripts", required: false)
 
     <!-- Global Init -->

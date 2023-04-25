@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Storefront.DATA.EF.Models.Universe>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Universes";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Add New Universe</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.UniverseDesc)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.UniverseId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UniverseId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UniverseId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.UniverseId" class="btn btn-secondary">Edit</a> 
+                    <a asp-action="Details" asp-route-id="@item.UniverseId" class="btn btn-secondary">Details</a> 
+                    <a asp-action="Delete" asp-route-id="@item.UniverseId" class="btn btn-secondary">Delete</a>
             </td>
         </tr>
 }
